@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: eureka
+  profiles: dev
+---
+spring:
+  profiles: dev
+server:
+  port: 7002
+feign:
+  hystrix:
+    enabled: true
+eureka:
+  instance:
+    hostname: server7002
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://server7001:7001/eureka/
+---
+spring:
+  profiles: release
+server:
+  port: 6002
+feign:
+  hystrix:
+    enabled: true
+eureka:
+  instance:
+    hostname: server6002
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://server6001:6001/eureka/
