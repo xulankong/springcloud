@@ -1,12 +1,12 @@
 spring:
   application:
     name: eureka
-  profiles: dev
+  profiles: test
   
 ---
 
 spring:
-  profiles: dev
+  profiles: test
 server:
   port: 7001
 feign:
