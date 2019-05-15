@@ -1,0 +1,13 @@
+spring:
+  profiles:
+    active: dev
+
+---
+spring:
+  profiles: dev
+  application: eureka-dev
+
+---
+spring:
+  profiles: release
+  application: eureka-release
