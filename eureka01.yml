@@ -2,7 +2,9 @@ spring:
   application:
     name: eureka
   profiles: dev
+  
 ---
+
 spring:
   profiles: dev
 server:
@@ -18,7 +20,9 @@ eureka:
     fetch-registry: false
     service-url:
       defaultZone: http://server7002:7002/eureka/
+      
 ---
+
 spring:
   profiles: release
 server:
