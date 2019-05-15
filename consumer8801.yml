@@ -1,0 +1,48 @@
+spring:
+  application:
+    name: consumer
+  profiles:
+    active: test
+---
+spring:
+  profiles: test
+server:
+  port: 8801
+feign:
+  hystrix:
+    enabled: true
+  compression:
+    request:
+      enabled: true     #开启GZIP压缩格式请求
+    response:
+      enabled: true     #开启GZIP压缩格式请求
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://server7001:7001/eureka/,http://server7002:7002/eureka/
+  instance:
+    instance-id: consumer8802   #自定义服务名称信息
+    prefer-ip-address: true     #访问路径可以显示IP地址
+
+---
+spring:
+  profiles: release
+server:
+  port: 6801
+feign:
+  hystrix:
+    enabled: true
+  compression:
+    request:
+      enabled: true     #开启GZIP压缩格式请求
+    response:
+      enabled: true     #开启GZIP压缩格式请求
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://server7001:7001/eureka/,http://server7002:7002/eureka/
+  instance:
+    instance-id: consumer6802   #自定义服务名称信息
+    prefer-ip-address: true     #访问路径可以显示IP地址
+
+
