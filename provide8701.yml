@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: provide
+  profiles: test
+---
+spring:
+  profiles: test
+feign:
+  hystrix:
+    enabled: true
+eureka:
+  client: #客户端注册进eureka服务列表内
+    service-url:
+      defaultZone:  http://server7001:7001/eureka/,http://server7002:7002/eureka/
+  instance:
+    instance-id: provide8701-test   #自定义服务名称信息
+    prefer-ip-address: true     #访问路径可以显示IP地址
+
+---
+spring:
+  profiles: release
+feign:
+  hystrix:
+    enabled: true
+eureka:
+  client: #客户端注册进eureka服务列表内
+    service-url:
+      defaultZone:  http://server7001:7001/eureka/,http://server7002:7002/eureka/
+  instance:
+    instance-id: provide-8701-release   #自定义服务名称信息
+    prefer-ip-address: true     #访问路径可以显示IP地址
