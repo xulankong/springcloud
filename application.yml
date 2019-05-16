@@ -5,9 +5,9 @@ spring:
 ---
 spring:
   profiles: dev
-  application: eureka-test
+  application: springcloud-config-server-test
 
 ---
 spring:
   profiles: release
-  application: eureka-release
+  application: springcloud-config-server-release
