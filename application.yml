@@ -11,11 +11,3 @@ spring:
 spring:
   profiles: release
   application: springcloud-config-server-release
----
-spring:
-  profiles: test
-  application: provide-test
----
-spring:
-  profiles: release
-  application: provide-release
