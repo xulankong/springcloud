@@ -6,7 +6,7 @@ spring:
 spring:
   profiles: test
   application:
-    name: springcloud-config-server-test
+    name: springcloud-config-server
 server:
   port: 8888
 
