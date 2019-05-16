@@ -1,0 +1,56 @@
+spring:
+  profiles:
+    active: test1
+---
+spring:
+  profiles: test1
+server:
+  port: 8801
+feign:
+  hystrix:
+    enabled: true
+  compression:
+    request:
+      enabled: true     #开启GZIP压缩格式请求
+    response:
+      enabled: true     #开启GZIP压缩格式请求
+---
+spring:
+  profiles: test2
+server:
+  port: 8802
+feign:
+  hystrix:
+    enabled: true
+  compression:
+    request:
+      enabled: true     #开启GZIP压缩格式请求
+    response:
+      enabled: true     #开启GZIP压缩格式请求
+---
+spring:
+  profiles: release1
+server:
+  port: 6801
+feign:
+  hystrix:
+    enabled: true
+  compression:
+    request:
+      enabled: true     #开启GZIP压缩格式请求
+    response:
+      enabled: true     #开启GZIP压缩格式请求
+---
+spring:
+  profiles: release2
+server:
+  port: 6802
+feign:
+  hystrix:
+    enabled: true
+  compression:
+    request:
+      enabled: true     #开启GZIP压缩格式请求
+    response:
+      enabled: true     #开启GZIP压缩格式请求
+

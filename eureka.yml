@@ -1,0 +1,36 @@
+spring:
+  profiles:
+    active: test1
+---
+spring:
+  profiles: test
+server:
+  port: 7001
+feign:
+  hystrix:
+    enabled: true
+---
+spring:
+  profiles: test
+server:
+  port: 7002
+feign:
+  hystrix:
+    enabled: true
+---
+spring:
+  profiles: release1
+server:
+  port: 6002
+feign:
+  hystrix:
+    enabled: true
+---
+spring:
+  profiles: release2
+server:
+  port: 6002
+feign:
+  hystrix:
+    enabled: true
+

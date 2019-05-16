@@ -1,0 +1,34 @@
+spring:
+  profiles: test1
+---
+spring:
+  profiles: test1
+server:
+  port: 8701
+feign:
+  hystrix:
+    enabled: true
+---
+spring:
+  profiles: test2
+server:
+  port: 8702
+feign:
+  hystrix:
+    enabled: true
+---
+spring:
+  profiles: release1
+server:
+  port: 8601
+feign:
+  hystrix:
+    enabled: true
+---
+spring:
+  profiles: release2
+server:
+  port: 8602
+feign:
+  hystrix:
+    enabled: true
