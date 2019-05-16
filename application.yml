@@ -5,9 +5,11 @@ spring:
 ---
 spring:
   profiles: test
-  application: springcloud-config-server
+  application:
+    name: springcloud-config-server
 
 ---
 spring:
-  profiles: release
-  application: springcloud-config-server
+  profiles: test
+  application:
+    name: springcloud-config-server
