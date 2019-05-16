@@ -1,11 +1,11 @@
 spring:
   profiles:
-    active: release
+    active: test
 
 ---
 spring:
   profiles: dev
-  application: eureka-dev
+  application: eureka-test
 
 ---
 spring:
