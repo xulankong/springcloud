@@ -4,7 +4,7 @@ spring:
 
 ---
 spring:
-  profiles: dev
+  profiles: test
   application: springcloud-config-server-test
 
 ---
