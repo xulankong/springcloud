@@ -7,9 +7,13 @@ spring:
   profiles: test
   application:
     name: springcloud-config-server
+server:
+  port: 8888
 
 ---
 spring:
-  profiles: test
+  profiles: release
   application:
     name: springcloud-config-server
+server:
+  port: 9999
